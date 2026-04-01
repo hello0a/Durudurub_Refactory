@@ -1,0 +1,56 @@
+src/
+├── api
+│   └── axios.ts
+├── App.module.css
+├── App.tsx
+├── character
+│   ├── DurupCharacter.tsx
+│   └── DurupLogo.tsx
+├── common
+│   └── Layout.tsx
+├── components # ??????
+│   ├── clubCard # 클럽
+│   ├── communityCard # ㄴㅇㄹㄴㅇㄹ
+│   ├── figma
+│   ├── footer
+│   ├── games
+│   ├── header
+│   ├── home
+│   ├── icons
+│   ├── modal
+│   ├── mypage
+│   └── ui
+├── contexts
+│   └── AppContext.tsx
+├── data
+│   └── mockCommunities.ts
+├── imports
+│   └── ladder-game.js
+├── layouts
+│   ├── MainLayout.tsx
+│   └── RootLayout.tsx
+├── main.tsx
+├── pages
+│   ├── admin
+│   ├── category
+│   ├── categoryList
+│   ├── communityCreate
+│   ├── communityDetail
+│   ├── communityEdit
+│   ├── error
+│   ├── explore
+│   ├── favorites
+│   ├── Home.tsx
+│   ├── HomePage.tsx
+│   ├── login
+│   ├── mypage
+│   ├── notice
+│   ├── other
+│   └── signup
+├── routes.tsx
+├── styles
+│   ├── fonts.css
+│   ├── index.css
+│   ├── tailwind.css
+│   └── theme.css
+└── vite-env.d.ts

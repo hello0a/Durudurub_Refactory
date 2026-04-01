@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>두루두룹 - 소모임 커뮤니티</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&libraries=services"></script>
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- 로고 -->
+      <div class="nav-logo" onclick="navigateTo('home')">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#00A651"/>
+          <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text">두루두룹</span>
+      </div>
+
+      <!-- 네비게이션 메뉴 -->
+      <div class="nav-menu">
+        <a href="#" class="nav-link" onclick="navigateTo('explore', event)">모임 둘러보기</a>
+        <a href="#" class="nav-link" onclick="navigateTo('notice', event)">공지사항</a>
+        <a href="#" class="nav-link" onclick="navigateTo('minigame', event)">미니게임</a>
+      </div>
+
+      <!-- 사용자 메뉴 -->
+      <div class="nav-user" id="navUser">
+        <!-- 로그인 전 -->
+        <div id="beforeLogin">
+          <button class="btn-login" onclick="navigateTo('login')">로그인</button>
+          <button class="btn-signup" onclick="navigateTo('signup')">회원가입</button>
+        </div>
+        
+        <!-- 로그인 후 -->
+        <div id="afterLogin" style="display: none;">
+          <button class="btn-create" onclick="navigateTo('create')">모임 만들기</button>
+          <div class="user-profile" onclick="toggleUserMenu()">
+            <img id="userAvatar" src="" alt="프로필" class="user-avatar">
+            <span id="userName" class="user-name"></span>
+          </div>
+          
+          <!-- 드롭다운 메뉴 -->
+          <div id="userDropdown" class="user-dropdown" style="display: none;">
+            <a href="#" onclick="navigateTo('mypage', event)">마이페이지</a>
+            <a href="#" onclick="navigateTo('meetings', event)">나의 모임</a>
+            <a href="#" onclick="navigateTo('favorites', event)">즐겨찾기</a>
+            <a href="#" id="adminLink" style="display: none;" onclick="navigateTo('admin', event)">관리자</a>
+            <a href="#" onclick="handleLogout(event)">로그아웃</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 메인 컨텐츠 영역 -->
+  <main id="app">
+    <!-- 페이지 컨텐츠가 동적으로 로드됩니다 -->
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#00A651"/>
+            <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="logo-text">두루두룹</span>
+        </div>
+        <p class="footer-text">© 2026 두루두룹. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="router.js"></script>
+  <script src="pages.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Lucide 아이콘 초기화
+    lucide.createIcons();
+  </script>
+</body>
+</html>

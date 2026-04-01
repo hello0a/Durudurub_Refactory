@@ -1,0 +1,366 @@
+/* 모임 상세 페이지 스타일 */
+
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.headerImage {
+  position: relative;
+  height: 400px;
+  background-color: #111827;
+}
+
+.headerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.mainContent {
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: -5rem;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 2rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #111827;
+  flex: 1;
+}
+
+.favoriteButton {
+  border-radius: 9999px;
+  padding: 0.75rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: 1rem;
+}
+
+.favoriteButton.liked {
+  background-color: #fefce8;
+}
+
+.favoriteButton.liked:hover {
+  background-color: #fef9c3;
+}
+
+.favoriteButton:not(.liked) {
+  background-color: #f3f4f6;
+}
+
+.favoriteButton:not(.liked):hover {
+  background-color: #e5e7eb;
+}
+
+.favoriteIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.favoriteIcon.liked {
+  fill: #facc15;
+  color: #facc15;
+}
+
+.favoriteIcon:not(.liked) {
+  color: #6b7280;
+}
+
+.favoriteBadge {
+  position: absolute;
+  bottom: -0.25rem;
+  right: -0.25rem;
+  background-color: #00A651;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hostInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hostAvatar {
+  width: 3rem;
+  height: 3rem;
+  background-color: #00A651;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hostAvatarText {
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.hostLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.hostName {
+  font-weight: 600;
+  color: #111827;
+}
+
+.participantInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.participantBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 166, 81, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+}
+
+.participantIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #00A651;
+}
+
+.participantText {
+  font-weight: 600;
+  color: #00A651;
+}
+
+.joinButton {
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.joinButton.active {
+  background-color: #00A651;
+  color: white;
+}
+
+.joinButton.active:hover {
+  background-color: #008E41;
+}
+
+.joinButton.pending {
+  background-color: #9ca3af;
+  color: white;
+  cursor: not-allowed;
+}
+
+.cardBody {
+  padding: 2rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.infoCard.fullWidth {
+  grid-column: span 2;
+}
+
+.infoIcon {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoIcon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #00A651;
+}
+
+.infoLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.infoValue {
+  font-weight: 600;
+  color: #111827;
+}
+
+.descriptionSection {
+  padding-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.postsSection {
+  margin-top: 2rem;
+}
+
+.postsSectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.memberOnlyBanner {
+  background: linear-gradient(to right, #00A651, #008E41);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 384px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.modalClose:hover {
+  color: #4b5563;
+}
+
+.modalIcon {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(0, 166, 81, 0.1);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.modalIcon svg {
+  width: 2rem;
+  height: 2rem;
+  color: #00A651;
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.modalDescription {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.modalButton {
+  width: 100%;
+  background-color: #00A651;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.modalButton:hover {
+  background-color: #008E41;
+}

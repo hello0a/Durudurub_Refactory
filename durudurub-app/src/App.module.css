@@ -1,0 +1,99 @@
+/* 메인 페이지 스타일 */
+
+/* 드래그 방지 */
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+}
+
+/* 전체 컨테이너 */
+.container {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100vw;
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-bottom: 64px; /* 하단 네비게이션 높이만큼 여백 추가 */
+  }
+}
+
+/* 네비게이션 바 영역 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* 메인 콘텐츠 영역 */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 히어로 섹션 */
+.heroSection {
+  background-color: #FBF7F0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 0;
+  }
+}
+
+/* 광고 배너 영역 */
+.adBanner {
+  background-color: white;
+}
+
+/* 카테고리 섹션 */
+.categorySection {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+/* 푸터 */
+.footer {
+  margin-top: auto;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* 컨텐츠 랩퍼 - 페이지 전환용 */
+.pageWrapper {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* 상세 페이지 컨테이너 */
+.detailContainer {
+  min-height: 100vh;
+  background-color: white;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* 카테고리 페지 컨테이너 */
+.categoryContainer {
+  min-height: 100vh;
+  background-color: white;
+  overflow-x: hidden;
+  max-width: 100vw;
+}

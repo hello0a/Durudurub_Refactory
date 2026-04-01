@@ -1,0 +1,118 @@
+/* 즐겨찾기 페이지 스타일 */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .communityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .communityGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.emptyStateIcon {
+  width: 4rem;
+  height: 4rem;
+  color: #d1d5db;
+  margin: 0 auto 1rem;
+}
+
+.emptyStateTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.emptyStateDescription {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.exploreButton {
+  background-color: #00A651;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.exploreButton:hover {
+  background-color: #008E41;
+}
+
+.loginPrompt {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.loginPromptIcon {
+  width: 4rem;
+  height: 4rem;
+  color: #00A651;
+  margin: 0 auto 1rem;
+}
+
+.loginPromptTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.loginPromptDescription {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.loginButton {
+  background-color: #00A651;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+  background-color: #008E41;
+}
